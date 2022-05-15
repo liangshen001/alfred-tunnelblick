@@ -8,12 +8,10 @@ const configurations = await run(() => {
     const length = application.configurations().length
     for (let i = 0; i < length; i++) {
         const configuration = application.configurations.at(i);
-        if (!configuration.name().includes('国')) {
-            configurations.push({
-                name: configuration.name(),
-                state: configuration.state()
-            });
-        }
+        configurations.push({
+            name: configuration.name(),
+            state: configuration.state()
+        });
     }
     return configurations
 })
