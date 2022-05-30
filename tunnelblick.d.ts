@@ -31,7 +31,7 @@ export namespace Tunnelblick {
      */
     export namespace TunnelblickSuite {
 
-        export interface Application extends JXASpecifier<'application'> {
+        export interface Application extends JXAApplication {
             /**
              * Connect a VPN configuration.
              * @param directParameter Name of configuration to connect.
