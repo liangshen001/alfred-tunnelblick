@@ -5,6 +5,7 @@ const configurations = await run(() => {
     let application = Application("Tunnelblick");
     application.includeStandardAdditions = true;
     const configurations = []
+    application.configurations()
     const length = application.configurations().length
     for (let i = 0; i < length; i++) {
         const configuration = application.configurations.at(i);

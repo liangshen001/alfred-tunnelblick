@@ -8,9 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup",
+    "build": "tsc",
     "build:Tunnelblick:tsd": "jxa /Applications/Tunnelblick.app",
     "npm:scope:wangliang": "npm config set scope liangshen",
-    "publish:version:patch": "npm version patch && npm run npm:scope:wangliang && npm publish --access public ."
+    "publish:version:patch": "npm run build && npm version patch && npm run npm:scope:wangliang && npm publish --access public ."
   },
   "keywords": [
     "alfred",
@@ -32,11 +33,13 @@
     "email": "850598163@qq.com"
   },
   "license": "ISC",
+  "devDependencies": {
+    "@apple-jxa/cli": "0.0.6",
+    "@apple-jxa/types": "0.0.5",
+    "typescript": "^4.7.2"
+  },
   "dependencies": {
-    "@apple-jxa/cli": "0.0.3",
-    "@apple-jxa/node": "0.0.9",
-    "@apple-jxa/types": "0.0.4",
-    "alfy": "^1.0.0",
-    "camelcase": "^6.3.0"
+    "@apple-jxa/node": "0.0.10",
+    "alfy": "^1.0.0"
   }
 }
