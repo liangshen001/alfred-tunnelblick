@@ -36,13 +36,13 @@ export namespace Tunnelblick {
              * Connect a VPN configuration.
              * @param directParameter Name of configuration to connect.
              */
-            connect(directParameter: JXAText): boolean
+            connect(directParameter: string): boolean
 
             /**
              * Disconnect a VPN configuration.
              * @param directParameter Name of configuration to disconnect.
              */
-            disconnect(directParameter: JXAText): boolean
+            disconnect(directParameter: string): boolean
 
             /**
              * Connect all unconnected VPN configurations.
@@ -68,7 +68,7 @@ export namespace Tunnelblick {
              * Notify Tunnelblick that an OpenVPN configuration file has been changed
              * @param directParameter Name of configuration whose OpenVPN configuration file was changed
              */
-            changedOpenvpnConfigurationFileFor(directParameter: JXAText): boolean
+            changedOpenvpnConfigurationFileFor(directParameter: string): boolean
 
             /**
              * Notify Tunnelblick that one or more VPN configurations have been added and/or removed.
@@ -80,27 +80,27 @@ export namespace Tunnelblick {
              * @param directParameter Username
              * @param option for: Name of configuration whose username is to be set. 
              */
-            saveUsername(directParameter: JXAText, option: { for: string }): boolean
+            saveUsername(directParameter: string, option: { for: string }): boolean
 
             /**
              * Save the password for a VPN configuration in the Keychain.
              * @param directParameter Password
              * @param option for: Name of configuration whose password is to be set. 
              */
-            savePassword(directParameter: JXAText, option: { for: string }): boolean
+            savePassword(directParameter: string, option: { for: string }): boolean
 
             /**
              * Save the passphrase for a VPN configuration in the Keychain.
              * @param directParameter Passphrase
              * @param option for: Name of configuration whose passphrase is to be set. 
              */
-            savePassphrase(directParameter: JXAText, option: { for: string }): boolean
+            savePassphrase(directParameter: string, option: { for: string }): boolean
 
             /**
              * Delete all of the credentials (username, password, and passphrase) for a VPN configuration.
              * @param directParameter Name of configuration whose credentials are to be deleted.
              */
-            deleteAllCredentialsFor(directParameter: JXAText): boolean
+            deleteAllCredentialsFor(directParameter: string): boolean
 
             configurations: JXAArraySpecifier<TunnelblickSuite.Configuration>
             Configuration: ObjectSpecifierConstructor<Configuration>
