@@ -1,6 +1,6 @@
 {
     "name": "@liangshen/alfred-tunnelblick",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Alfred workflow for Tunnelblick",
     "type": "module",
     "main": "dist/index.js",
