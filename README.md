@@ -6,7 +6,6 @@
 
 ### 运行环境
 
-* MacOS
 * Nodejs 14.x.x
 * Alfred Powerpack
 * Tunnelblick
@@ -14,7 +13,7 @@
 ### 安装
 
 ```
-npm i -g @liangshen/alfred-tunnelblick
+npm install @liangshen/alfred-tunnelblick -g
 ```
 
 ### 使用方法

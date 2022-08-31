@@ -5,29 +5,18 @@
     "type": "module",
     "main": "dist/index.js",
     "scripts": {
-        "postinstall": "alfred-init",
-        "postuninstall": "alfred-cleanup",
         "build": "tsc",
         "test": "node --loader ts-node/esm action.ts",
-        "build:Tunnelblick:tsd": "jxa /Applications/Tunnelblick.app",
-        "npm:scope:wangliang": "npm config set scope liangshen",
-        "publish:version:patch": "npm run build && npm version patch && npm run npm:scope:wangliang && npm publish --access public ."
+        "build:Tunnelblick:tsd": "jxa /Applications/Tunnelblick.app"
     },
     "keywords": [
+        "tunnelblick",
         "alfred",
         "workflow",
-        "tunnelblick",
         "vpn",
         "alfy"
     ],
-    "bugs": {
-        "url": "https://github.com/liangshen001/alfred-tunnelblick/issues"
-    },
-    "homepage": "https://github.com/liangshen001/alfred-tunnelblick",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/liangshen001/alfred-tunnelblick.git"
-    },
+    "repository": "liangshen001/alfred-tunnelblick",
     "author": {
         "name": "Wang Liang",
         "email": "850598163@qq.com"
@@ -43,6 +32,6 @@
     },
     "dependencies": {
         "@apple-jxa/node": "0.0.10",
-        "@liangshen/alfred": "^1.0.18"
+        "@liangshen/alfred": "^1.1.20"
     }
 }
